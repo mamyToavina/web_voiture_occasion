@@ -1,0 +1,196 @@
+<!--<div class="p-3">
+  <div class="card">
+    <div class="card-header">Authentification</div>
+    <div class="card-body">
+      <form [formGroup]="formLogin" (ngSubmit) = "submit_login()">
+        <div class="mb-3">
+          <label class="form-label">Username</label>
+          <input type="text" class="form-control" formControlName="username">
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Password</label>
+          <input type="password" class="form-control" formControlName="password">
+        </div>
+
+        <button class="btn btn-success">Login</button>
+      </form>
+    </div>
+  </div>
+</div>-->
+
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+  
+    
+
+    <style>
+        .main {
+    background-image: url(assets/images/bg-img.jpg);
+    height: 100vh;
+}
+
+
+/* first col */
+.authfy-panel-left {
+    background-color: rgba(38, 43, 72, 0.92);
+    color: #ffffff;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    box-shadow: 0px 3px 6px #1d2030;
+
+}
+
+.btn-facebook {
+    background: #3b5998;
+}
+
+.btn-twitter {
+    background: #00aced;
+    padding-right: 35px;
+}
+
+.btn-google {
+    padding-right: 23px;
+}
+
+/* second col */
+.remember-box {
+    padding-right: 69px;
+}
+
+.btn-lg {
+    margin-right: 90px;
+}
+
+.authfy-login {
+    padding-left: 60px;
+}
+
+.authfy-heading {
+    margin-right: 64px;
+    padding-top: 25px;
+}
+
+.main-row {
+    transform: translate(20%, 50%);
+}
+
+.form-group {
+    box-sizing: border-box;
+    box-shadow: skyblue;
+
+}
+
+.eyeicon {
+    position: absolute;
+    margin-left: 320px;
+    cursor: pointer;
+}
+    </style>
+</head>
+
+<body>
+    <!-- navbar -->
+
+
+    <div class="main">
+        <div class="container-fluid">
+            <div class="row" style="padding-left: 20%;padding-top: 10%;">
+                <div class="col-sm-5 authfy-panel-left pt-5 " style="width:300px ; height: 400px;">
+                    <div class="brand-col">
+                        <div class="headline">
+                            <div class="brand-logo">
+                                <img src="assets/images/glichlogo.svg" style="    width: 100%;"
+                                    alt="brand-logo">
+                            </div>
+                            <p class="pt-2 text-center">Vente de voitures d'occasion</p>
+                            <div class="row social-buttons pt-2 ps-5 ">
+                                <div class="col-xs-4 col-sm-4 col-md-12 p-2">
+                                    <a class="btn btn-block btn-facebook">
+                                        <i class="fa-brands fa-facebook"></i> <span class="hidden-xs hidden-sm ">A prix sympa!</span>
+                                    </a>
+                                </div>
+                                <div class="col-xs-4 col-sm-4 col-md-12 p-2">
+                                    <a class="btn btn-block btn-twitter ">
+                                        <i class="fa-brands fa-twitter"></i><span class="hidden-xs hidden-sm">Avec confiance</span>
+                                    </a>
+                                </div>
+                                <div class="col-xs-4 col-sm-4 col-md-12 pt-2">
+                                    <a class="btn btn-block btn-google" style="background-color: red;">
+                                        <i class="fa-brands fa-google-plus"></i> <span
+                                            class="hidden-xs hidden-sm">Plus de rapidité !</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-7 authfy-panel-right" style="background-color:white ; width: 535px;">
+                    <div class="authfy-login">
+                        <div class="authfy-panel panel-login text-center active">
+                            <div class="authfy-heading pe-4">
+                                <h3 class="auth-title">Connectez-vous à votre compte</h3>
+
+                                
+                              
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12">
+                                  <form [formGroup]="formLogin" (ngSubmit)="submit_login()">
+                                        <div class="form-group">
+                                            <input type="email" class="form-control email my-2" formControlName="username" required
+                                                placeholder="Nom d'utilisateur" style="width: 80%;">
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="pwdMask">
+                                                <span class="d-flex">
+                                                    <input type="password" class="form-control password" formControlName="password"
+                                                        placeholder="Mot de passe" style="width: 80%;">
+
+                                                </span>
+                                            </div>
+
+                                        </div>
+                                        <div class="row remember-row d-flex pt-4 me-5">
+                                            <div class="col-xs-6 col-sm-6 remember-box">
+                                                <label class="checkbox text-left">
+                                                    <input type="checkbox" value="remember-me">
+                                                    <span class="label-text">Me souvenir</span>
+                                                </label>
+                                            </div>
+                                            <div class="col-xs-6 col-sm-6">
+                                                <p class="forgotPwd">
+                                                    <a class="lnk-toggler" data-panel=".panel-forgot">Mot de passe
+                                                        oublié?</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <button class="btn btn-lg btn-primary btn-block " type="submit"
+                                                style="width: 80%;">
+                                                
+                                                Se connecter
+                                            </button>
+
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

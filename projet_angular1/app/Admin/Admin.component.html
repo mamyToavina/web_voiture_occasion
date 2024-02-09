@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="card">
+    <h2 class="card-header">{{ title }}</h2>
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Nom de la catégorie</th>
+              <th>Nombre de voitures vendues</th>
+              <th>Pourcentage</th>              
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let category of statisticsData">
+              <td>{{ category.categoryName }}</td>
+              <td>{{ category.numberOfCarsSold }}</td>
+              <td>{{ category.percentage }}%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="card-footer">Total de voitures vendues: {{ totalCarsSold }}</p>
+    </div>
+  </div>
+</div>

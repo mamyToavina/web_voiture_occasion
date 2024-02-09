@@ -1,0 +1,15 @@
+.statistics-container {
+    width: 80%;
+    margin: auto;
+  }
+  
+  .category {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+  }
+  
